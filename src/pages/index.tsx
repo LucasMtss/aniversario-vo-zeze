@@ -32,7 +32,9 @@ export default function Home() {
       setName('');
       setAddedNames([]);
     } else {
-      toast.error('Erro ao salvar presença.');
+      const errorResponse = await response.json();
+      console.log('Error Response:', errorResponse);
+      toast.error('Erro ao salvar presença. ' + errorResponse);
     }
   };
 
