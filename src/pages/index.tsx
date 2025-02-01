@@ -36,6 +36,7 @@ export default function Home() {
       console.log('Error Response:', errorResponse);
       toast.error('Erro ao salvar presença. ' + errorResponse);
     }
+    setIsLoading(false);
   };
 
   function addNewName() {
