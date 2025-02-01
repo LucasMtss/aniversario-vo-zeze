@@ -7,9 +7,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     try {
       // Insere cada nome como uma nova linha na tabela "presencas"
-      const { data, error } = await supabase
+      const { error } = await supabase
         .from('presencas')
-        .insert(names.map(name => ({ nome: name })));
+        .insert(names.map((name: string) => ({ nome: name })));
 
       if (error) {
         console.error('Database error:', error);
@@ -20,9 +20,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     } catch (error) {
       console.error('API error:', error);
       res.status(500).json({ error: error });
-      res.send({
-        error
-      })
     }
   } else {
     res.status(405).json({ error: 'Método não permitido.' });
