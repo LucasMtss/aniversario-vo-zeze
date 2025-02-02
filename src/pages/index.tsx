@@ -52,7 +52,11 @@ export default function Home() {
       <div className='flex flex-col items-center border border-purple-200 px-4 py-8 h-full w-full'>
         <Toaster richColors position="top-right" closeButton />
         <h1 className="font-bold text-2xl mb-3 text-slate-600">Aniversário da Vó Zezé</h1>
-        <p>Convidamos você para comemorar o aniversário da vó Zezé. Haverá missa no Santuário de Nossa Senhora das Mercês e após a missa, almoço no Sítio Dornelas.</p>
+        <p>Convidamos você para comemorar o aniversário da vó Zezé.</p>
+        <br />
+        <p>Haverá missa no Santuário de Nossa Senhora das Mercês e após a missa, almoço no Sítio Dornelas (Sítio da Elaine e do Éberton próximo ao trevo).</p>
+        <br />
+        <p className='w-full'>Levar bebida alcoólica, quem for beber.</p>
         <div className="w-full mt-4">
           <hr />
         </div>
